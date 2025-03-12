@@ -2,14 +2,13 @@ package n1ex2;
 
 public class N1Ex2 {
     public static void main(String[] args) {
-        Cotxe.brake();
+        Car.brake();
 
-        //si excribimos Cotxe.  nos salen todos los metodos accessibles de manera estatica o sea getBrand(), getModel() y brake();
-        //pero para acceder al metodo accelerate(), hay que instanciar un objeto de la clase Cotxe :
-
-        Cotxe myCar = new Cotxe(); //no hace falta ningun argumento ya que no hay nada en el constructor
+        Car myCar = new Car("myModel", 1.8);
         myCar.accelerate();
-        myCar.brake(); // aquí a pesar de poder ejecutar el metodo brake(), Eclipse nos aconseja accedir de una manera estatica (como en linea 6)
+        myCar.brake(); //aquí vemos que se tenie que llamar desde la clase
 
+        System.out.println(Car.getModel());
+        System.out.println(myCar.getPower());
     }
 }

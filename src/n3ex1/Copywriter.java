@@ -1,21 +1,19 @@
 package n3ex1;
 import java.util.ArrayList;
 
-public class Redactor{
+public class Copywriter {
 
-    // 1 atributs
     private String name;
     private String id;
     private static int salary = 1500;
-    private ArrayList<Noticia> noticias = new ArrayList<Noticia>();
+    private ArrayList<News> cwNews = new ArrayList<News>();
 
-    // 2 constructor
-    public Redactor(String name , String id) {
+
+    public Copywriter(String name , String id) {
         this.name = name;
         this.id = id;
     }
 
-    // 3 getters return
     public String getName() {
         return this.name;
     }
@@ -23,21 +21,18 @@ public class Redactor{
         return this.id;
     }
 
-    public ArrayList<Noticia> getNoticias(){
-        return noticias;
+    public ArrayList<News> getNews(){
+        return cwNews;
     }
 
-    // 4 setters void
-    public void setNom(String name) {
+
+    public void setName(String name) {
         this.name = name;
     }
-    public static void setSou(int salary) {
-        Redactor.salary = salary;
+    public static void setSalary(int salary) {
+        Copywriter.salary = salary;
     }
 
-    // 5 metodes generals
-
-    // 6 metodes propis
     public String toString() {
         return "Soy el redactor " + this.name + " con el DNI " + this.id + "y como todos mis compañeros mi sueldo es de "
                 + salary + " euros";

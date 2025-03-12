@@ -1,33 +1,27 @@
 package n3ex1;
 
-public class NoticiaMoto extends Noticia {
-    //atributs
+public class MotoNews extends News {
+
     private String team;
     private final int basePrice = 100;
     private final int honYam = 50;
 
-    //constructor
-    public NoticiaMoto(String title , String team) {
+    public MotoNews(String title , String team) {
         super(title);
         this.team = team;
 
     }
 
-    // getters
     public String getTeam() {
         return this.team;
     }
 
 
-
-
-    // setters
     public void setTeam(String team) {
         this.team = team;
     }
 
 
-    // metodes generals
     public int calculatePrice() {
         int price = basePrice;
 
@@ -46,7 +40,6 @@ public class NoticiaMoto extends Noticia {
         return points;
     }
 
-    // metodes propis
     public String toString() {
         return "Esto es una noticia de motociclisme. Mi título es : " + super.getTitle() + ". ";
     }

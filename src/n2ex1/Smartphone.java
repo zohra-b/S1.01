@@ -1,7 +1,7 @@
 package n2ex1;
 
-public class Smartphone extends Telefon
-        implements Camera, Rellotge{
+public class Smartphone extends Phone
+        implements Camera, Watch {
 
 
     public Smartphone(String brand, String model) {

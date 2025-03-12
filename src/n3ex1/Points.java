@@ -1,6 +1,6 @@
 package n3ex1;
 
-public interface Puntuacio {
+public interface Points {
     int calculatePoints();
 }
 

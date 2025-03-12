@@ -1,6 +1,6 @@
 package n3ex1;
 
-public class NoticiaTenis extends Noticia {
+public class TennisNews extends News {
     //atributs
     private String competition;
     private String player;
@@ -8,7 +8,7 @@ public class NoticiaTenis extends Noticia {
     private final int goat = 100;
 
     //constructor
-    public NoticiaTenis(String title , String competition, String player) {
+    public TennisNews(String title , String competition, String player) {
         super(title);
         this.competition = competition;
         this.player = player;

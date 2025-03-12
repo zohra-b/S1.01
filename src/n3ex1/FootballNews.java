@@ -1,7 +1,6 @@
 package n3ex1;
 
-public class NoticiaFutbol extends Noticia{
-    // 1 atributs
+public class FootballNews extends News {
     private String competition;
     private String club;
     private String player;
@@ -10,17 +9,13 @@ public class NoticiaFutbol extends Noticia{
     private final int barcaMadrid = 100;
     private final int torresBenze = 50;
 
-
-    // constructor
-    public NoticiaFutbol(String title , String competition, String club, String player) {
+    public FootballNews(String title , String competition, String club, String player) {
         super(title);
         this.competition = competition;
         this.club = club;
         this.player = player;
-
     }
 
-    // getters
     public String getCompetition() {
         return this.competition;
     }
@@ -33,7 +28,6 @@ public class NoticiaFutbol extends Noticia{
         return this.player;
     }
 
-    // setters
     public void setCompetition(String competition) {
         this.competition = competition;
     }
@@ -46,8 +40,6 @@ public class NoticiaFutbol extends Noticia{
         this.player = player;
     }
 
-
-    // metodes generals
     public int calculatePrice() {
         int price = basePrice;
         if (this.competition.equalsIgnoreCase("Lliga de Campions")) {
@@ -78,10 +70,8 @@ public class NoticiaFutbol extends Noticia{
         return points;
     }
 
-    // metodes propis
     public String toString() {
         return "Esto es una noticia de futbol. Mi título es : " + super.getTitle() + ". ";
     }
-
 
 }

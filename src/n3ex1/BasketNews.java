@@ -1,13 +1,13 @@
 package n3ex1;
 
-public class NoticiaBasquet extends Noticia{
+public class BasketNews extends News {
     private String competition;
     private String club;
     private final int basePrice = 250;
     private final int eurolliga = 75;
     private final int barcaMadrid = 75;
 
-    public NoticiaBasquet(String title , String competition, String club) {
+    public BasketNews(String title , String competition, String club) {
         super(title);
         this.competition = competition;
         this.club = club;
@@ -58,7 +58,7 @@ public class NoticiaBasquet extends Noticia{
         return points;
     }
 
-    // metodes propis
+
     public String toString() {
         return "Esto es una noticia de básquet. Mi título es : " + super.getTitle() + ". ";
     }

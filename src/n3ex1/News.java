@@ -1,6 +1,6 @@
 package n3ex1;
 
-public class Noticia implements Preu, Puntuacio{
+public class News implements Price, Points {
 
     // 1 atributs
     private String title;
@@ -8,7 +8,7 @@ public class Noticia implements Preu, Puntuacio{
     private int price;
 
     // 2 constructor
-    public Noticia(String title) {
+    public News(String title) {
         this.title = title;
 
     }

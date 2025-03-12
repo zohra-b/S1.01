@@ -8,6 +8,7 @@ public class N2Ex1 {
 
         iphone.alarm();
         iphone.photograph();
+        iphone.call("637251773");
 
     }
 

@@ -1,6 +1,6 @@
 package n3ex1;
 
-public interface Preu {
+public interface Price {
     int calculatePrice();
 }
 
