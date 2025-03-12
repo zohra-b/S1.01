@@ -7,13 +7,12 @@ public class BasketNews extends News {
     private final int eurolliga = 75;
     private final int barcaMadrid = 75;
 
-    public BasketNews(String title , String competition, String club) {
-        super(title);
+    public BasketNews(String title , String text, String competition, String club) {
+        super(title, text);
         this.competition = competition;
         this.club = club;
     }
 
-    // getters
     public String getCompetition() {
         return this.competition;
     }
@@ -22,8 +21,6 @@ public class BasketNews extends News {
         return this.club;
     }
 
-
-    // setters
     public void setCompetition(String competition) {
         this.competition = competition;
     }
@@ -32,8 +29,7 @@ public class BasketNews extends News {
         this.club = club;
     }
 
-
-
+    @Override
     public int calculatePrice() {
         int price = basePrice;
         if (this.competition.equalsIgnoreCase("Eurolliga")) {
@@ -45,6 +41,7 @@ public class BasketNews extends News {
         return price;
     }
 
+    @Override
     public int calculatePoints() {
         int points = 4;
         if (this.competition.equalsIgnoreCase("Eurolliga")) {
@@ -57,9 +54,10 @@ public class BasketNews extends News {
         }
         return points;
     }
-
-
+    @Override
     public String toString() {
-        return "Esto es una noticia de básquet. Mi título es : " + super.getTitle() + ". ";
+        return "noticia de básquet. \n Competicion : " + this.competition +
+                " - Club : " + this.club + ". \n Título : " + super.getTitle() + ". " +
+                "\n Texto : " + super.getText();
     }
 }

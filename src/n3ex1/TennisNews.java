@@ -1,20 +1,17 @@
 package n3ex1;
 
 public class TennisNews extends News {
-    //atributs
     private String competition;
     private String player;
     private final int basePrice = 150;
     private final int goat = 100;
 
-    //constructor
-    public TennisNews(String title , String competition, String player) {
-        super(title);
+    public TennisNews(String title , String text, String competition, String player) {
+        super(title, text);
         this.competition = competition;
         this.player = player;
     }
 
-    // getters
     public String getCompetition() {
         return this.competition;
     }
@@ -23,8 +20,6 @@ public class TennisNews extends News {
         return this.player;
     }
 
-
-    // setters
     public void setCompetition(String competition) {
         this.competition = competition;
     }
@@ -33,7 +28,7 @@ public class TennisNews extends News {
         this.player = player;
     }
 
-    // metodes generals
+   @Override
     public int calculatePrice() {
         int price = basePrice;
 
@@ -42,7 +37,7 @@ public class TennisNews extends News {
         }
         return price;
     }
-
+    @Override
     public int calculatePoints() {
         int points = 4;
 
@@ -52,9 +47,11 @@ public class TennisNews extends News {
         return points;
     }
 
-    // metodes propis
+    @Override
     public String toString() {
-        return "Esto es una noticia de tenis. Mi título es : " + super.getTitle() + ". ";
+        return "noticia de tenis. \n Competicion : " + this.competition +
+                " - Tenista : " + this.player + ". \n Título : " + super.getTitle() + ". " +
+                "\n Texto : " + super.getText();
     }
 
 }

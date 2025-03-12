@@ -33,8 +33,9 @@ public class Copywriter {
         Copywriter.salary = salary;
     }
 
+    @Override
     public String toString() {
-        return "Soy el redactor " + this.name + " con el DNI " + this.id + "y como todos mis compañeros mi sueldo es de "
+        return "el redactor " + this.name + " con el DNI " + this.id + " y como todos mis compañeros mi sueldo es de "
                 + salary + " euros";
     }
 }

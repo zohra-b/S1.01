@@ -6,8 +6,8 @@ public class MotoNews extends News {
     private final int basePrice = 100;
     private final int honYam = 50;
 
-    public MotoNews(String title , String team) {
-        super(title);
+    public MotoNews(String title , String text, String team) {
+        super(title, text);
         this.team = team;
 
     }
@@ -21,7 +21,7 @@ public class MotoNews extends News {
         this.team = team;
     }
 
-
+    @Override
     public int calculatePrice() {
         int price = basePrice;
 
@@ -31,6 +31,7 @@ public class MotoNews extends News {
         return price;
     }
 
+    @Override
     public int calculatePoints() {
         int points = 3;
 
@@ -40,8 +41,11 @@ public class MotoNews extends News {
         return points;
     }
 
+    @Override
     public String toString() {
-        return "Esto es una noticia de motociclisme. Mi título es : " + super.getTitle() + ". ";
+        return "noticia de Motociclisme. \n Equipo : " + this.team +
+                "\n Título : " + super.getTitle() + ". " +
+                "\n Texto : " + super.getText();
     }
 
 }

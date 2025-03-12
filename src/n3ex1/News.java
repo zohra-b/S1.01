@@ -1,19 +1,16 @@
 package n3ex1;
 
 public class News implements Price, Points {
-
-    // 1 atributs
     private String title;
     private String text;
     private int price;
+    private int points;
 
-    // 2 constructor
-    public News(String title) {
+    public News(String title, String text) {
         this.title = title;
-
+        this.text = text;
     }
 
-    // 3 getters
     public String getTitle() {
         return this.title;
     }
@@ -21,7 +18,7 @@ public class News implements Price, Points {
         return this.text;
     }
 
-    public int getPuntuacio() {
+    public int getPoints() {
         return this.calculatePoints();
     }
 
@@ -29,23 +26,17 @@ public class News implements Price, Points {
         return this.calculatePrice();
     }
 
-    // 4 setters
-
-    // 5 metodes generals
 
     @Override
     public int calculatePoints() {
-
-        return 0;
+        return points;
     }
 
     @Override
     public int calculatePrice() {
-
         return price;
     }
 
-    // 6 metodes propis
     public String toString() {
         return "Esto es una noticia general. Mi titulo es : " + this.title + ".";
     }

@@ -5,10 +5,9 @@ public class F1News extends News {
     private final int basePrice = 100;
     private final int ferMer = 50;
 
-    public F1News(String title , String team) {
-        super(title);
+    public F1News(String title , String text, String team) {
+        super(title, text);
         this.team = team;
-
     }
 
     public String getTeam() {
@@ -20,7 +19,7 @@ public class F1News extends News {
         this.team = team;
     }
 
-
+    @Override
     public int calculatePrice() {
         int price = basePrice;
 
@@ -29,7 +28,7 @@ public class F1News extends News {
         }
         return price;
     }
-
+    @Override
     public int calculatePoints() {
         int points = 4;
 
@@ -39,11 +38,12 @@ public class F1News extends News {
         return points;
     }
 
+    @Override
     public String toString() {
-        return "Esto es una noticia de F1. Mi título es : " + super.getTitle() + ". ";
+        return "noticia de F1. \n Escudería : " + this.team +
+                "\n Título : " + super.getTitle() + ". " +
+                "\n Texto : " + super.getText();
     }
-
-
 
 
 }

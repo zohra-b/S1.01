@@ -9,8 +9,8 @@ public class FootballNews extends News {
     private final int barcaMadrid = 100;
     private final int torresBenze = 50;
 
-    public FootballNews(String title , String competition, String club, String player) {
-        super(title);
+    public FootballNews(String title, String text,  String competition, String club, String player) {
+        super(title, text);
         this.competition = competition;
         this.club = club;
         this.player = player;
@@ -40,6 +40,7 @@ public class FootballNews extends News {
         this.player = player;
     }
 
+    @Override
     public int calculatePrice() {
         int price = basePrice;
         if (this.competition.equalsIgnoreCase("Lliga de Campions")) {
@@ -54,24 +55,27 @@ public class FootballNews extends News {
         return price;
     }
 
+    @Override
     public int calculatePoints() {
         int points = 5;
         if (this.competition.equalsIgnoreCase("Lliga de Campions")) {
-            points +=3;
+            points += 3;
         } else if (this.competition.equalsIgnoreCase("Lliga")) {
-            points +=2;
+            points += 2;
         }
         if (this.club.equalsIgnoreCase("Barça") || this.club.equalsIgnoreCase("Madrid")) {
-            points +=1;
+            points += 1;
         }
         if (this.player.equalsIgnoreCase("Ferran Torres") || this.player.equalsIgnoreCase("Benzema")) {
-            points +=1;
+            points += 1;
         }
         return points;
     }
 
+    @Override
     public String toString() {
-        return "Esto es una noticia de futbol. Mi título es : " + super.getTitle() + ". ";
+        return "noticia de futbol. \n Competición : " + this.competition +
+                " - Club : " + this.club + " - Jugador : " + this.player + ". \n Título : " + super.getTitle() + ". " +
+                "\n Texto : " + super.getText();
     }
-
 }
