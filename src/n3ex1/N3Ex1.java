@@ -34,7 +34,7 @@ public class N3Ex1 {
             option = input.nextInt();
             input.nextLine();
             generalMenuSwitchCases();
-
+            System.out.print(answer);
         } while (option != 0);
         input.close();
     }
