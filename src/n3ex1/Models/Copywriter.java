@@ -1,4 +1,5 @@
-package n3ex1;
+package n3ex1.Models;
+
 import java.util.ArrayList;
 
 public class Copywriter {

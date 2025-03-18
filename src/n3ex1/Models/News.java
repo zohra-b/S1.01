@@ -1,4 +1,7 @@
-package n3ex1;
+package n3ex1.Models;
+
+import n3ex1.Controllers.Points;
+import n3ex1.Controllers.Price;
 
 public class News implements Price, Points {
     private String title;

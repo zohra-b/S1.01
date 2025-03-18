@@ -1,4 +1,6 @@
-package n3ex1;
+package n3ex1.Controllers;
+
+import n3ex1.Models.Copywriter;
 
 import static n3ex1.N3Ex1.copywriters;
 

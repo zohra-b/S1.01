@@ -1,4 +1,4 @@
-package n3ex1;
+package n3ex1.Models;
 
 public class FootballNews extends News {
     private String competition;

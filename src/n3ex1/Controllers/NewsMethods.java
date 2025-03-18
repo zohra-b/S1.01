@@ -1,7 +1,9 @@
-package n3ex1;
+package n3ex1.Controllers;
 
-import static n3ex1.CopywriterMethods.copywriterIndex;
-import static n3ex1.CopywriterMethods.copywriterIndexByName;
+import n3ex1.Models.*;
+
+import static n3ex1.Controllers.CopywriterMethods.copywriterIndex;
+import static n3ex1.Controllers.CopywriterMethods.copywriterIndexByName;
 import static n3ex1.N3Ex1.*;
 
 public class NewsMethods {
